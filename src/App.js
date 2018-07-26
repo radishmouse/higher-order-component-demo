@@ -7,10 +7,29 @@ class App extends Component {
           other={RenderMe}
           text="hey this is text from the App component!"
         />
+
+        <Octomom>
+          <p>this is a child</p>
+          <p>this is a another child</p>
+        </Octomom>
+
       </div>
     );
   }
 }
+
+const Octomom = (props) => {
+  return (
+    <div className="container-thingy-thing">
+      is this thing on?
+      {props.children}
+    </div>
+  )
+}
+
+
+
+
 const RenderOther = (props) => {
   const OtherComponent = props.other;
   return (
